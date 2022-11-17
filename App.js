@@ -1,11 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, Alert, TouchableNativeFeedback, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <TouchableNativeFeedback
+    onPress={() => Alert.alert('Hemos tocado el boton')}>
+      
+      <Text>Hola Mundo</Text>
+    </TouchableNativeFeedback>
     </View>
   );
 }
@@ -13,7 +16,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#aaa',
     alignItems: 'center',
     justifyContent: 'center',
   },
